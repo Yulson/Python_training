@@ -66,7 +66,16 @@ def show_movie_details(movie):
     print(f"Rating: {movie['rating']}")
     print("==============")
 
+def find_movie():
+    find_by = input("What property of the movie are you looking for? ")
+    looking_for = input("What are you searching for ")
+    found = []
+
+    for movie in movies:
+        if movie[find_by] == looking_for:
+            found.append(movie)
+    print(found)
+    return found
+
 menu()
 
-#def find_movie():
-#def show_movies()
