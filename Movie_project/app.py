@@ -16,4 +16,12 @@ List of tasks:
 
 
 def menu()
- input
+    user_input = input("Pdint a - to add a movie, v - to view the entire list of movies, f - to find a particular movie and q - to quite :")
+    while user_input != 'q':
+      if user_input == 'a':
+        add_movie()
+      elif: user_input == 'f'
+        find_movie()
+      elif: user_input == 'v'
+        view_movies_list()
+        
