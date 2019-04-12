@@ -13,15 +13,51 @@ List of tasks:
 4. User should be able to find a particular movie by name.
 5. User should be able to quit the menu.
 """
+"""
+movies = []
+movie = {
+     'name' = ... (str),
+     'genre' = ... (str),
+     'year' = ... (int)
+     'rating' = ... (int)
+}
+"""
+movies = []
 
+def menu():
+    user_input = input("Enter a to add a movie, l to see your movies, f to find a movie, and q - to quite: ")
 
-def menu()
-    user_input = input("Pdint a - to add a movie, v - to view the entire list of movies, f - to find a particular movie and q - to quite :")
     while user_input != 'q':
       if user_input == 'a':
         add_movie()
-      elif: user_input == 'f'
+      elif user_input == 'f':
         find_movie()
-      elif: user_input == 'v'
-        view_movies_list()
-        
+      elif user_input == 'l':
+        show_movies()
+      else:
+          print("Unknown command. Please, try again.")
+      user_input = input("Enter a to add a movie, l to see your movies, f to find a movie, and q - to quite: ")
+
+
+
+def add_movie():
+    name = input("Enter a movie name: ")
+    genre = input("Enter a movie genre: ")
+    year = int(input("Enter a year of production: "))
+    rating = int(input("Enter your rate from 0 to 10: "))
+
+    movies.append({
+        'name': name,
+        'genre': genre,
+        'year': year,
+        'rating': rating
+    })
+
+
+menu()
+print(movies)
+
+
+
+#def find_movie():
+#def show_movies()
