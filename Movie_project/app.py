@@ -54,10 +54,19 @@ def add_movie():
     })
 
 
+def show_movies():
+    for movie in movies:
+        show_movie_details(movie)
+
+
+def show_movie_details(movie):
+    print(f"Name: {movie['name']}")
+    print(f"Genre: {movie['genre']}")
+    print(f"Release year: {movie['year']}")
+    print(f"Rating: {movie['rating']}")
+    print("==============")
+
 menu()
-print(movies)
-
-
 
 #def find_movie():
 #def show_movies()
