@@ -24,3 +24,6 @@ for player in players:  # Go over each player
  
 # Calculate their winnings using the formula!
 winnings = 100 ** len(top_player['numbers'].intersection(lottery_numbers))
+
+winnings = str(100 ** len(top_player['numbers'].intersection(lottery_numbers)))
+print(top_player['name'] + " won " + winnings)
