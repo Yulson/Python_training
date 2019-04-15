@@ -9,6 +9,11 @@ class Movie:
       self.name = new_name
       self.director = new_director
 
+    def print_info(self):
+      print('<<{}>> by {}'.format(self.name, self.director))
+
+ # let's try to add a method `print_info()` here:
+
 
 my_movie = Movie('The Matrix', 'Wachowski')
 
